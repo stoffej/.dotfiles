@@ -58,7 +58,7 @@ radius = 0
 ;   {overline,underline}-size
 ;   {overline,underline}-color
 line-size = 2
-line-color = #fff
+line-color = #93A1A1
 
 ; Values applied to all borders
 ; Individual side values can be defined using:
@@ -141,7 +141,7 @@ tray-maxsize = 16
 ; Enable pseudo transparency
 ; Will automatically be enabled if a fully transparent
 ; background color is defined using `tray-background`
-tray-transparent = false
+; tray-transparent = false
 
 ; Background color for the tray container 
 ; ARGB color (e.g. #f00, #ff992a, #ddff1023)
@@ -226,13 +226,12 @@ reverse-scroll = false
 ; Default: false
 fuzzy-match = false
 label-unfocused = %index% %name% %icon%
+label-unfocused-foreground = #586E75
 label-unfocused-padding = 1
-label-unfocused-foreground = #ffffff
 
 label-focused = %index% %name% %icon%
-label-focused-foreground = #ffffff
-
-label-focused-underline = #ffffff
+label-focused-foreground = #93A1A1
+label-focused-underline = #93A1A1
 label-focused-padding = 1
 
 [module/date]
@@ -255,27 +254,7 @@ time-alt = %H:%M:%S
 
 label = %date% %time%
 label-font = 0
-label-foreground = #fff
-; 
-; [module/wireless-network]
-; type = internal/network
-; interface = wlp3s0
-
-label-connected = %essid%
-format-connected = <ramp-signal>
-label-connected-foreground = #A3BE8C
-
-format-disconnected = <label-disconnected>
-label-disconnected = Not connected
-label-disconnected-foreground = #BF616A
-
-ramp-signal-foreground = #A3BE8C
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-5 = 
+label-foreground = #93A1A1
 
 [module/cpu]
 type = internal/cpu
@@ -459,12 +438,14 @@ animation-discharging-framerate = 500
 
 [module/decor-glyph]
 type = custom/text
-content-foreground = #fff
+; content-foreground = #fff
+content-foreground = #93A1A1
 margin = 0
 
 [module/sep]
 inherit = module/decor-glyph
-content = "⋮"
+;content = "⋮"
+content = " "
 
 
 
@@ -536,7 +517,8 @@ radius = 0
 ;   {overline,underline}-size
 ;   {overline,underline}-color
 line-size = 2
-line-color = #fff
+line-color = #93A1A1
+
 
 ; Values applied to all borders
 ; Individual side values can be defined using:
@@ -619,7 +601,7 @@ tray-maxsize = 16
 ; Enable pseudo transparency
 ; Will automatically be enabled if a fully transparent
 ; background color is defined using `tray-background`
-tray-transparent = false
+;tray-transparent = false
 
 ; Background color for the tray container 
 ; ARGB color (e.g. #f00, #ff992a, #ddff1023)
@@ -701,12 +683,11 @@ fuzzy-match = true
 
 label-unfocused = %index% %icon% %name%
 label-unfocused-padding = 1
-label-unfocused-foreground = #ffffff
+label-unfocused-foreground = #586E75
 
 label-focused = %index% %icon% %name%
-label-focused-foreground = #ffffff
-
-label-focused-underline = #ffffff
+label-focused-foreground = #93A1A1
+label-focused-underline = #93A1A1
 label-focused-padding = 1
 
 ; Seconds to sleep between updates
@@ -726,7 +707,8 @@ time-alt = %H:%M:%S
 
 label = %date% %time%
 label-font = 0
-label-foreground = #fff
+label-foreground = #93A1A1
+
 ; 
 ; [module/wireless-network]
 ; type = internal/network

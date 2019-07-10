@@ -149,8 +149,8 @@ set $ws1 1:code 
 set $ws2 2:terminal 
 set $ws3 3:file 
 set $ws4 4:web 
-set $ws4 5:
-set $ws4 6:
+set $ws5 5:misc 
+set $ws6 6:misc2 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -279,7 +279,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+exec --no-startup-id start_conky_solarized
 # exec --no-startup-id start_conky_green
 #exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
