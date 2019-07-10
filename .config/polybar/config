@@ -560,7 +560,8 @@ font-2 = unifont:size=10;3
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center =
-modules-right = sep memory sep cpu sep battery sep date
+;modules-right = sep memory sep cpu sep battery sep date wired-network
+modules-right = sep memory sep cpu sep battery sep date wired-network
 
 ; The separator will be inserted between the output of each module
 separator = 
@@ -729,3 +730,9 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-5 = 
+
+
+; [module/wired-network]
+; type = internal/network
+; interface = enp0s3
+; interval = 3.0
