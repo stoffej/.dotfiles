@@ -39,7 +39,7 @@ offset-y = 0
 background = #2B303B
 
 ; Foreground ARGB color (e.g. #f00, #ff992a, #ddff1023)
-foreground = #000
+foreground = #93A1A1
 
 ; Background gradient (vertical steps)
 ;   background-[0-9]+ = #aarrggbb
@@ -561,7 +561,7 @@ font-2 = unifont:size=10;3
 modules-left = i3
 modules-center =
 ;modules-right = sep memory sep cpu sep battery sep date wired-network
-modules-right = sep memory sep cpu sep battery sep date wired-network
+modules-right = sep memory sep cpu sep battery sep date 
 
 ; The separator will be inserted between the output of each module
 separator = 

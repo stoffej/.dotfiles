@@ -145,8 +145,8 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:code 
-set $ws2 2:terminal 
+set $ws2 1:terminal 
+set $ws1 2:code 
 set $ws3 3:file 
 set $ws4 4:web 
 set $ws5 5:misc 
