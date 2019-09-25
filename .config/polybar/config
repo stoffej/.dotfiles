@@ -100,7 +100,7 @@ font-2 = unifont:size=10;3
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center =
-modules-right = sep memory sep cpu sep date
+modules-right = sep cpu sep memory sep date
 
 ; The separator will be inserted between the output of each module
 separator = 
@@ -201,7 +201,7 @@ strip-wsnumbers = true
 ; Sort the workspaces by index instead of the default
 ; sorting that groups the workspaces by output
 ; Default: false
-index-sort = true
+index-sort = false
 
 ; Create click handler used to focus workspace
 ; Default: true
@@ -263,7 +263,7 @@ type = internal/cpu
 ; Default: 1
 interval = 0.5
 
-label =  %percentage:2%%
+label = %percentage:2%% 
 
 label-foreground = #8FA1B3
 
@@ -293,7 +293,7 @@ format = <label>
 ;   %gb_swap_free%
 ;   %gb_swap_used%
 
-label =  %gb_used%
+label = %gb_used% 
 
 label-foreground = #B48EAD
 
@@ -366,20 +366,20 @@ time-format = %H:%M
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging> <animation-charging>
 
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-discharging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <label-discharging> <ramp-capacity>
 
 ; Available tags:
 ;   <label-full> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
-format-full = <ramp-capacity> <label-full>
+format-full = <label-full> <ramp-capacity>
 
 ; Available kens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
@@ -561,7 +561,7 @@ font-2 = unifont:size=10;3
 modules-left = i3
 modules-center =
 ;modules-right = sep memory sep cpu sep battery sep date wired-network
-modules-right = sep memory sep cpu sep battery sep date 
+modules-right = sep cpu sep memory sep battery sep date 
 
 ; The separator will be inserted between the output of each module
 separator = 
@@ -648,7 +648,7 @@ enable-ipc = false
 ; on different bars
 ;
 ; Default: false
-pin-workspaces = true
+pin-workspaces = false
 
 ; This will split the workspace name on ':'
 ; Default: false
@@ -657,7 +657,7 @@ strip-wsnumbers = true
 ; Sort the workspaces by index instead of the default
 ; sorting that groups the workspaces by output
 ; Default: false
-index-sort = true
+index-sort = false
 
 ; Create click handler used to focus workspace
 ; Default: true
