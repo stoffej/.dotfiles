@@ -151,8 +151,8 @@ set $ws3 3:file 
 set $ws4 4:web 
 set $ws5 5:misc 
 set $ws6 6:work 
-set $ws6 7:
-set $ws6 8:
+set $ws7 7:
+set $ws8 8:
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
