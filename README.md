@@ -14,25 +14,15 @@
      sudo apt install stow
      ```
    
-## Repository Structure
+### Stow files for fritid
 
+```sh
+stow -d ~/.dotfiles/fritid -t ~ .
 ```
-~/.dotfiles/
-├── work/
-│   ├── bash/
-│   │   ├── .bashrc
-│   │   ├── .bash_profile
-│   ├── git/
-│   │   ├── .gitconfig
-├── fritid/
-│   ├── bash/
-│   │   ├── .bashrc
-│   │   ├── .bash_profile
-│   ├── git/
-│   │   ├── .gitconfig
-├── activate-work.sh
-├── activate-personal.sh
-├── README.md
+
+### Stow files for work
+```sh
+stow -d ~/.dotfiles/work -t ~ .
 ```
 
 ## Switching Profiles
@@ -111,3 +101,7 @@ git push origin main
 - You can add more profiles if needed (e.g., `gaming`, `server`).
 
 
+### git local
+
+git config --local user.name "Your Name"
+git config --local user.email "your.email@example.com"
