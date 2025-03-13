@@ -1,4 +1,5 @@
 #!/bin/bash
+#!/bin/bash
 
 # Ensure the fritid directory exists
 if [ ! -d ~/.dotfiles/fritid ]; then
@@ -6,20 +7,15 @@ if [ ! -d ~/.dotfiles/fritid ]; then
     exit 1
 fi
 
-# Unstow everything from the work profile (if it exists)
-if [ -d ~/.dotfiles/work ]; then
-    for dir in ~/.dotfiles/work/*; do
-        if [ -d "$dir" ]; then
-            stow -D -d ~/.dotfiles/work -t ~ "$(basename "$dir")"
-        fi
-    done
-fi
-
-# Stow everything from the fritid profile
-for dir in ~/.dotfiles/fritid/*; do
-    if [ -d "$dir" ]; then
-        stow -d ~/.dotfiles/fritid -t ~ "$(basename "$dir")"
-    fi
+# Remove existing conflicting files before unstowing
+for file in ~/.dotfiles/fritid/.*; do
+    [ -f "$file" ] && rm -f ~/"$(basename "$file")"
 done
+
+# Unstow work profile first
+stow -D -d ~/.dotfiles/work -t ~ .
+
+# Stow fritid profile
+stow -d ~/.dotfiles/fritid -t ~ .
 
 echo "Switched to Fritid (Personal) profile"

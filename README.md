@@ -60,41 +60,6 @@ Run the corresponding script to change profiles:
   ~/.dotfiles/activate-fritid.sh
   ```
 
-### Creating the Activation Scripts
-If not included, create these scripts and make them executable.
-
-#### `activate-work.sh`
-```sh
-#!/bin/bash
-stow -D -d ~/.dotfiles/personal -t ~ bash git  # Unstow personal
-stow -d ~/.dotfiles/work -t ~ bash git         # Stow work
-echo "Switched to work profile"
-```
-
-#### `activate-fritid.sh`
-```sh
-#!/bin/bash
-stow -D -d ~/.dotfiles/work -t ~ bash git      # Unstow work
-stow -d ~/.dotfiles/fritid -t ~ bash git     # Stow personal
-echo "Switched to fritid profile"
-```
-
-Make them executable:
-```sh
-chmod +x ~/.dotfiles/activate-work.sh
-chmod +x ~/.dotfiles/activate-personal.sh
-```
-
-## Syncing with GitHub
-After making changes, push updates to GitHub:
-
-```sh
-cd ~/.dotfiles
-git add .
-git commit -m "Updated dotfiles"
-git push origin main
-```
-
 ## Notes
 - Ensure no conflicts between profiles when switching.
 - Keep a backup of your original dotfiles before applying changes.
