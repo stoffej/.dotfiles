@@ -1,10 +1,18 @@
 #!/bin/bash
 
+# Enable dotglob so that hidden files are expanded correctly
+shopt -s dotglob
 
-# Remove existing conflicting files before unstowing
-for file in ~/.dotfiles/work/.*; do
-    [ -f "$file" ] && rm -f ~/"$(basename "$file")"
+# Remove existing conflicting files and directories before unstowing
+for file in ~/.dotfiles/work/*; do
+    target=~/"$(basename "$file")"
+    if [ -e "$target" ]; then
+        rm -rf "$target"
+    fi
 done
+
+# Disable dotglob to avoid unintended side effects in the shell
+shopt -u dotglob
 
 # Unstow fritid profile first
 stow -D -d ~/.dotfiles/fritid -t ~ .
