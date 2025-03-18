@@ -1,0 +1,112 @@
+add_newline = false
+
+#format = """$shlvl$username$container$hostname$directory$all$git_branch$git_state$git_status$git_metrics$git_commit
+#format = """$shlvl$username$container$hostname$directory$all$git_branch$git_state$git_status$git_metrics$git_commit$status"""
+format = """$shlvl$username$container$hostname$directory$all$git_branch$git_state$git_status$git_metrics$git_commit"""
+
+$status"""
+# [───────────────────────────────](white)
+# $all
+# """
+
+[character]
+error_symbol = "[>](#ff5555)"
+success_symbol = "[>](#50fa7b)"
+
+[env_var.DISPLAY]
+variable = "DISPLAY"
+default = ""
+disabled = true
+
+[fill]
+symbol = " "
+
+[line_break]
+disabled = true
+
+[status]
+symbol = ""
+disabled = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+# Disable the AWS module.
+[aws]
+disabled = true
+
+[git_branch]
+style = "#ff79c6"
+format = "on [$symbol$branch]($style) "
+
+# Directory setttings
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 4
+truncate_to_repo = false
+truncation_symbol = "…/"
+read_only = " Read Only "
+read_only_style = "red"
+style = "#50fa7b"
+
+[username]
+disabled = false
+
+[hostname]
+ssh_only = true
+format =  "[$hostname](red) "
+
+
+[sudo]
+disabled = false
+style = "blue"
+format = "with [sudo]($style) "
+
+
+
+[git_status]
+command_timeout = 10
+disabled = true
+style = "#ff5555"
+format = '([\[][$all_status$ahead_behind]($style)[\]]) '
+
+[git_metrics]
+disabled = false
+format = "([\\[]()[+$added]($added_style) [-$deleted]($deleted_style)[\\]]()) "
+
+[time]
+disabled = true
+
+
+[container]
+style = "#ff5555"
+format = '[\[$name\]]($style) '
+
+[shlvl]
+disabled = true
+format = "[$shlvl levels down\n]($style)"
+# format = "🐚"
+# repeat = true
+style = "red"
+threshold = 2
+
+
+[python]
+disabled=true
+# format = 'via [\(py:${pyenv_prefix}(${version}\) )(\($virtualenv\) )]($style)'
+version_format = 'v${major}.${minor}.${patch}'
+format = 'via [py (${version} )(\(${virtualenv}${pyenv_prefix}\) )]($style)'
+
+[cmake]
+disabled = true
+symbol = "cmake:"
+
+[c]
+disabled = true
+
+[rust]
+symbol = "rust:"
+
+[os]
+disabled = true
