@@ -20,7 +20,7 @@ ZSH_THEME="spaceship"
 # Spaceship settings (fixed syntax)
 SPACESHIP_PROMPT_ASYNC=true
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="⚡"
+# SPACESHIP_CHAR_SYMBOL="⚡"
 
 # Minimal spaceship sections for performance
 SPACESHIP_PROMPT_ORDER=(
@@ -43,9 +43,11 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Autosuggest settings
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=default'
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
+
 
 # Alias expansion function
 globalias() {
