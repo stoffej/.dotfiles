@@ -15,7 +15,11 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme config - fixed syntax
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
+
+# Initialize Starship
+eval "$(starship init zsh)"
+
 
 # Spaceship settings (fixed syntax)
 SPACESHIP_PROMPT_ASYNC=true
@@ -78,4 +82,7 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 # Add scripts to PATH
 export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/.fzf/bin:$PATH"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="$HOME/.fzf/bin:$PATH"
