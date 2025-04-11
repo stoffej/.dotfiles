@@ -2,9 +2,11 @@ add_newline = false
 
 #format = """$shlvl$username$container$hostname$directory$all$git_branch$git_state$git_status$git_metrics$git_commit
 #format = """$shlvl$username$container$hostname$directory$all$git_branch$git_state$git_status$git_metrics$git_commit$status"""
-format = """$shlvl$username$container$hostname$directory$all$git_branch$git_state$git_status$git_metrics$git_commit"""
+#format = """$shlvl$username$container$hostname$directory$all$git_branch$git_state$git_status$git_metrics$git_commit"""
+format = """$shlvl$username$container$hostname$directory$git_branch$git_state$git_status$git_metrics$git_commit"""
 
-$status"""
+
+#$status"""
 # [───────────────────────────────](white)
 # $all
 # """
@@ -105,6 +107,10 @@ symbol = "cmake:"
 
 [c]
 disabled = true
+symbol = ""
+format = ''
+
+
 
 [rust]
 symbol = "rust:"
