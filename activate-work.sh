@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Enable dotglob so that hidden files are expanded correctly
+ie# Enable dotglob so that hidden files are expanded correctly
 shopt -s dotglob
 
 # Remove existing conflicting files and directories before unstowing
