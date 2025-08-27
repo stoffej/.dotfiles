@@ -66,6 +66,8 @@ bindkey " " globalias
 bindkey "^[[Z" magic-space
 bindkey -M isearch " " magic-space
 
+alias ll='ls -la'
+
 # Lazy load SSH agent
 function _load_ssh_agent() {
     if [ -z "$SSH_AUTH_SOCK" ]; then
@@ -86,3 +88,4 @@ export PATH="$HOME/.fzf/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="$HOME/.fzf/bin:$PATH"
+
