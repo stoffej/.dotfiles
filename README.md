@@ -63,7 +63,7 @@ Run the corresponding script to change profiles:
 ## Notes
 - Ensure no conflicts between profiles when switching.
 - Keep a backup of your original dotfiles before applying changes.
-- You can add more profiles if needed (e.g., `gaming`, `server`).
+
 
 
 ### git local
